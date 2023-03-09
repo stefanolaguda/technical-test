@@ -9,7 +9,5 @@ export class FooterComponent implements OnInit {
   currentDate: Date = new Date();
 
   constructor() {}
-  ngOnInit(): void {
-    throw new Error('Method not implemented.');
-  }
+  ngOnInit(): void {}
 }
