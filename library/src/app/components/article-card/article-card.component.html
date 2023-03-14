@@ -1,15 +1,20 @@
 <div class="col">
   <div class="card card-product-grid">
-    <a href="#" class="img-wrap"> <img src="" class="img-rounded" width="180" height="225" alt="Product"> </a>
+    <a href="#" class="img-wrap"> <img src="../../../assets/images/book.png" class="img-rounded" width="180"
+        height="225" alt="Product"> </a>
     <div class="info-wrap">
-      <a href="#" class="title text-truncate">hbnijhn</a>
-      <div class="price mb-2">20</div> <!-- price.// -->
+      <a href="#" class="title text-truncate">{{book.author}}</a>
+      <div class="price mb-2">Trama: {{book.story}}</div> <!-- price.// -->
 
-      <button href="#" class="btn btn-sm btn-light">
+      <!-- <button class="btn btn-sm btn-light" (click)="editBookEmit()"> -->
+      <button class="btn btn-sm btn-light" (click)="editBook(book.idBook)">
         <i class="material-icons md-edit"></i>Modifica
       </button>
-      <button href="#" class="btn btn-sm btn-outline-danger">
+      <button (click)="deleteBookEmit()" class="btn btn-sm btn-outline-danger">
         <i class="material-icons md-delete_forever"></i>Elimina
+      </button>
+      <button (click)="detailsBook(book.idBook)" class="btn btn-sm btn-warning">
+        Dettaglio
       </button>
     </div>
   </div>

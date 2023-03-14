@@ -10,6 +10,8 @@ import { ErrorPageComponent } from './pages/error-page/error-page.component';
 import { ArticleCardComponent } from './components/article-card/article-card.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { FormBookComponent } from './pages/form-book/form-book.component';
+import { DetailsBookComponent } from './pages/details-book/details-book.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +20,8 @@ import { HttpClientModule } from '@angular/common/http';
     LoginComponent,
     ErrorPageComponent,
     ArticleCardComponent,
+    FormBookComponent,
+    DetailsBookComponent,
   ],
   imports: [
     BrowserModule,

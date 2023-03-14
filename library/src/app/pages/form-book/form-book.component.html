@@ -1,0 +1,66 @@
+<section class="content-main" style="max-width: 760px">
+
+  <div class="content-header">
+    <h2 class="content-title">{{titleTypeForm}}</h2>
+  </div>
+
+  <div class="card mb-4">
+    <div class="card-body">
+
+      <!-- <form> -->
+      <!-- Titolo, autore -->
+      <div class="row gx-2">
+        <div class="col-sm-6 mb-3">
+          <label for="title" class="form-label">Titolo:</label>
+          <input id="title" type="text" placeholder="" class="form-control" [(ngModel)]="bookSelected.title">
+        </div>
+        <div class="col-sm-6 mb-3">
+          <label for="author" class="form-label">Autore:</label>
+          <input id="author" type="text" placeholder="" class="form-control" [(ngModel)]="bookSelected.author">
+        </div>
+      </div>
+
+      <!-- Codice Libro, Letture Completate -->
+      <div class="row gx-2">
+        <div class="col-sm-6 mb-3">
+          <label for="ccodec" class="form-label">Codice Libro:</label>
+          <input id="codec" type="text" placeholder="" class="form-control" [(ngModel)]="bookSelected.codec">
+        </div>
+        <div class="col-sm-6 mb-3">
+          <label for="numLecturesCompleted" class="form-label">Letture Completate:</label>
+          <input id="numLecturesCompleted" type="number" placeholder="" class="form-control"
+            [(ngModel)]="bookSelected.numLecturesCompleted">
+        </div>
+      </div>
+
+      <!-- Data aggiunta, data rimozione -->
+      <div class="row gx-2">
+        <div class="col-sm-6 mb-3">
+          <label for="dataAddedStore" class="form-label">Data Aggiunta store:</label>
+          <input id="dataAddedStore" type="text" placeholder="" class="form-control"
+            [(ngModel)]="bookSelected.dataAddedStore">
+        </div>
+        <div class="col-sm-6 mb-3">
+          <label for="dataDeleteStore" class="form-label">Data di rimozione dallo store:</label>
+          <input id="dataDeleteStore" type="text" placeholder="" class="form-control"
+            [(ngModel)]="bookSelected.dataDeleteStore">
+        </div>
+      </div>
+
+      <!--Trama -->
+      <div class="mb-4">
+        <label class="form-label">Trama</label>
+        <textarea placeholder="" class="form-control" rows="2" [(ngModel)]="bookSelected.story"></textarea>
+      </div>
+      <br>
+      <button class="btn btn-primary me-3" (click)="save()">Salva Articolo</button>
+      <a href="#" class="btn btn-outline-danger"> × Annulla</a>
+      <div class="row gx-2 mt-3">
+        <div class="alert alert-success" role="alert" *ngIf="operationCompleted">
+          Salvataggio completato!
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
