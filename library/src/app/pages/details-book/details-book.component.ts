@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { IBook } from 'src/app/model/Book';
 import { DataServerService } from 'src/services/data/data-server.service';
 
@@ -24,8 +24,12 @@ export class DetailsBookComponent implements OnInit {
 
   constructor(
     private dataService: DataServerService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private router: Router
   ) {}
+
+  // @Output()
+  // delete = new EventEmitter();
 
   ngOnInit(): void {
     this.idBook = this.route.snapshot.params['id'];
@@ -43,4 +47,9 @@ export class DetailsBookComponent implements OnInit {
   handleError(error: Object) {
     this.errorMessage = error.toString();
   }
+
+  editBook = (id: number) => {
+    console.log(id);
+    this.router.navigate(['formbook', id]);
+  };
 }

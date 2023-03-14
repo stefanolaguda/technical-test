@@ -37,12 +37,12 @@
       <div class="row gx-2">
         <div class="col-sm-6 mb-3">
           <label for="dataAddedStore" class="form-label">Data Aggiunta store:</label>
-          <input id="dataAddedStore" type="text" placeholder="" class="form-control"
+          <input id="dataAddedStore" type="date" placeholder="" class="form-control"
             [(ngModel)]="bookSelected.dataAddedStore">
         </div>
         <div class="col-sm-6 mb-3">
           <label for="dataDeleteStore" class="form-label">Data di rimozione dallo store:</label>
-          <input id="dataDeleteStore" type="text" placeholder="" class="form-control"
+          <input id="dataDeleteStore" type="date" placeholder="" class="form-control"
             [(ngModel)]="bookSelected.dataDeleteStore">
         </div>
       </div>
@@ -54,7 +54,8 @@
       </div>
       <br>
       <button class="btn btn-primary me-3" (click)="save()">Salva Articolo</button>
-      <a href="#" class="btn btn-outline-danger"> × Annulla</a>
+      <!-- <a href="#" class="btn btn-outline-danger"> × Annulla</a> -->
+      <a href="./" class="btn btn-success">Torna Indietro</a>
       <div class="row gx-2 mt-3">
         <div class="alert alert-success" role="alert" *ngIf="operationCompleted">
           Salvataggio completato!
